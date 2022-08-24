@@ -2,13 +2,14 @@ import requests
 from _datetime import datetime
 from datetime import timedelta
 from BColor import BColors
+from TelegramConfigs import TelegramConfs
 
 
 class TelegramApi:
     __message = 'None'
-    __chatId = '@find_my_new_home'
-    __token = '5482919534:AAF0YUzdqKtw10mpJNYmklKFM650OfHLHIw'
-    __api = 'https://api.telegram.org/bot'
+    __chatId = TelegramConfs.chatID
+    __token = TelegramConfs.token
+    __api = TelegramConfs.API
     sent = 0
 
     def send_messages(self, items):
